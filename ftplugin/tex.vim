@@ -6,13 +6,14 @@ let s:save_cpo = &cpoptions
 set cpoptions&vim
 
 " Default values of global variables
-let g:latexfmt_no_join_any   = get( g:,'latexfmt_no_join_any', []) + ['\(\\)\@1<!%',
+let g:latexfmt_no_join_any   = get(g:,'latexfmt_no_join_any', []) + ['\(\\)\@1<!%',
          \                '\begin', '\end', '\section', '\subsection', 
          \                '\subsubsection', '\document', '\(\\)\@1<!\[', '\]'] 
 let g:latexfmt_no_join_prev  = get( g:,'latexfmt_no_join_prev', []) + ['\item'] 
 let g:latexfmt_no_join_next  = get( g:,'latexfmt_no_join_next', []) + ['\\' ]
 let g:latexfmt_verbatim_envs = get( g:,'latexfmt_verbatim_envs', []) + ['equation', 
-         \                         'align', 'eqnarray', '\(\\)\@1<!\[' ] 
+         \                         'align', 'eqnarray', 'lstlisting', 'algorithm', 
+         \                         '\(\\)\@1<!\[' ] 
 let g:latexfmt_preserve_envs = get( g:,'latexfmt_preserve_envs', 1 )
 let g:latexfmt_merge_blanks  = get( g:,'latexfmt_merge_blanks', 1 )
 
